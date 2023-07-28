@@ -1,0 +1,23 @@
+@server = https://stalynalvarado-legendary-cod-5g4pjrjvgg5hp764-8081.preview.app.github.dev
+@api = {{server}}/api/ec3
+
+################ Categorias: ################
+###
+ GET {{api}}/categoria
+###
+POST {{api}}/categoria
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Cuerda"}
+################ Instrumentos: ################
+###
+GET {{api}}/instrumento
+###
+POST {{api}}/instrumento
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categoria/1"}
+###
+GET {{api}}/instrumento/1/categoria
+###
+GET {{api}}/instrumento?sort=nombre,desc
